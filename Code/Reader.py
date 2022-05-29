@@ -1,9 +1,29 @@
 import pyttsx3
 import PyPDF2
-libro = open('pnl_cast.pdf','rb')
-PdfReader = PyPDF2.PdfFileReader(libro)
-paginas = PdfReader.numPages
-print(paginas)
-speaker = pyttsx3.init()
-speaker.say('Haciendo tarea en la casa desde hace 3 días')
-speaker.runAndWait()
+
+#Infantil
+a=input("Escriba el genero del libro que desea escuchar: ")
+if a=="infantil":
+    libro = open('D:\Proyectos\Reader\libros\Caperucita.pdf','rb')
+    PdfReader = PyPDF2.PdfFileReader(libro)
+    paginas = PdfReader.numPages
+    print(f'Estas escuchando Caperucita Roja. Nro de paginas: {paginas}')
+    speaker = pyttsx3.init()
+    for paginas in range(2, paginas):
+        page = PdfReader.getPage(2)
+        text = page.extract_text()
+        speaker.say(text)
+        speaker.runAndWait()
+
+#Novela
+if a=="leyenda":
+    libro = open('D:\Proyectos\Reader\libros\la_llorona.pdf','rb')
+    PdfReader = PyPDF2.PdfFileReader(libro)
+    paginas = PdfReader.numPages
+    print(f'Estas escuchando La leyenda de la llorona. Nro de paginas: {paginas}')
+    speaker = pyttsx3.init()
+    for paginas in range(0, paginas):
+        page = PdfReader.getPage(0)
+        text = page.extract_text()
+        speaker.say(text)
+        speaker.runAndWait()

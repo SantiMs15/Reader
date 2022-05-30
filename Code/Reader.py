@@ -7,7 +7,7 @@ if a=="infantil":
     libro = open('D:\Proyectos\Reader\libros\Caperucita.pdf','rb')
     PdfReader = PyPDF2.PdfFileReader(libro)
     paginas = PdfReader.numPages
-    print(f'Estas escuchando Caperucita Roja. Nro de paginas: {paginas}')
+    print(f'Estas escuchando Caperucita Roja. Nro de páginas: {paginas}')
     speaker = pyttsx3.init()
     for paginas in range(2, paginas):
         page = PdfReader.getPage(2)
@@ -20,7 +20,7 @@ if a=="leyenda":
     libro = open('D:\Proyectos\Reader\libros\la_llorona.pdf','rb')
     PdfReader = PyPDF2.PdfFileReader(libro)
     paginas = PdfReader.numPages
-    print(f'Estas escuchando La leyenda de la llorona. Nro de paginas: {paginas}')
+    print(f'Estas escuchando La leyenda de la llorona. Nro de páginas: {paginas}')
     speaker = pyttsx3.init()
     for paginas in range(0, paginas):
         page = PdfReader.getPage(0)
@@ -30,7 +30,7 @@ if a=="leyenda":
 
 #Terror
 if a=="terror":
-    libro=open('C:\Reader project\Reader\libros\it-eso','rb')
+    libro=open('D:\Proyectos\Reader\libros\it-eso.pdf','rb')
     PdfReader=PyPDF2.PdfFileReader(libro)
     paginas=PdfReader.numPages
     print(f'Estas escuchanda It el payaso de Stephen King. Nro de paginas:{paginas}')
@@ -43,36 +43,35 @@ if a=="terror":
 
 #Fantasia
 if a=="fantasia":
-    libro=open()
+    libro=open('D:\Proyectos\Reader\libros\Percy_Jackson_rayo.pdf','rb')
     PdfReader=PyPDF2.PdfFileReader(libro)
     paginas=PdfReader.numPages
-    print(f'Estas escuchando Percy Jackson el Ladron del rayo de Rick Riordan. Nro de paginas:{paginas}')
+    print(f'Estas escuchando Percy Jackson el Ladron del rayo de Rick Riordan. Nro de páginas:{paginas}')
     speaker=pyttsx3.init()
-    for paginas in range (0, paginas):
-        page=PdfReader.getPage(0)
+    for paginas in range (2, paginas):
+        page=PdfReader.getPage(2)
         text=page.extract_text()
         speaker.say(text)
         speaker.runAndWait()
 
 #Drama
 if a=="drama":
-    libro=open()
+    libro=open('D:\Proyectos\Reader\libros\gray.pdf','rb')
     PdfReader=PyPDF2.PdfFileReader(libro)
     paginas=PdfReader.numPages
-    print(f'Estas escuchando El retrato de Dorian Gray de Oscar Wilde:{paginas}')
+    print(f'Estas escuchando El retrato de Dorian Gray de Oscar Wilde. Nro de páginas:{paginas}')
     speaker=pyttsx3.init()
-    for paginas in range (0, paginas):
-        page=PdfReader.getPage(0)
+    for paginas in range (4, paginas):
         text=page.extract_text()
         speaker.say(text)
         speaker.runAndWait()
 
 #Romance
 if a=="romance":
-    libro=open()
+    libro=open('D:\Proyectos\Reader\libros\Orgullo_P.pdf','rb')
     PdfReader=PyPDF2.PdfFileReader(libro)
     paginas=PdfReader.numPages
-    print(f'Estas escuchando Orgullo y Prejuicio de Jane Austen:{paginas}')
+    print(f'Estas escuchando Orgullo y Prejuicio de Jane Austen. Nro de páginas:{paginas}')
     speaker=pyttsx3.init()
     for paginas in range (0, paginas):
         page=PdfReader.getPage(0)
@@ -82,17 +81,13 @@ if a=="romance":
 
 #Ciencia ficcion
 if a=="scifi":
-    libro=open()
+    libro=open('D:\Proyectos\Reader\libros\mancerneuro.pdf','rb')
     PdfReader=PyPDF2.PdfFileReader(libro)
     paginas=PdfReader.numPages
-    print(f'Estas escuchando Neuromante de William Gibson:{paginas}')
+    print(f'Estas escuchando Neuromante de William Gibson. Nro de páginas:{paginas}')
     speaker=pyttsx3.init()
-    for paginas in range (0, paginas):
-        page=PdfReader.getPage(0)
+    for paginas in range (4, paginas):
+        page=PdfReader.getPage(4)
         text=page.extract_text()
         speaker.say(text)
         speaker.runAndWait()
-
-
-
-

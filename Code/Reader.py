@@ -27,3 +27,16 @@ if a=="leyenda":
         text = page.extract_text()
         speaker.say(text)
         speaker.runAndWait()
+
+#Terror
+if a=="terror":
+    libro=open("C:\Users\USUARIO\curseforge\Desktop\proyecto ending\Reader\libros\it-eso.pdf","rb")
+    PdfReader=PyPDF2.PdfFileReader(libro)
+    paginas=PdfReader.numPages
+    print(f'Estas escuchanda It el payaso de Stephen King. Nro de paginas:{paginas}')
+    speaker=pyttsx3.init()
+    for paginas in range (0, paginas):
+        page=PdfReader.getPage(0)
+        text=page.extract_text()
+        speaker.say(text)
+        speaker.runAndWait()

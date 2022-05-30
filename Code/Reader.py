@@ -42,6 +42,7 @@ if a=="terror":
         speaker.runAndWait()
 
 #Fantasia
+if a=="fantasia":
     libro=open()
     PdfReader=PyPDF2.PdfFileReader(libro)
     paginas=PdfReader.numPages
@@ -54,6 +55,7 @@ if a=="terror":
         speaker.runAndWait()
 
 #Drama
+if a=="drama":
     libro=open()
     PdfReader=PyPDF2.PdfFileReader(libro)
     paginas=PdfReader.numPages
@@ -66,3 +68,31 @@ if a=="terror":
         speaker.runAndWait()
 
 #Romance
+if a=="romance":
+    libro=open()
+    PdfReader=PyPDF2.PdfFileReader(libro)
+    paginas=PdfReader.numPages
+    print(f'Estas escuchando Orgullo y Prejuicio de Jane Austen:{paginas}')
+    speaker=pyttsx3.init()
+    for paginas in range (0, paginas):
+        page=PdfReader.getPage(0)
+        text=page.extract_text()
+        speaker.say(text)
+        speaker.runAndWait()
+
+#Ciencia ficcion
+if a=="scifi":
+    libro=open()
+    PdfReader=PyPDF2.PdfFileReader(libro)
+    paginas=PdfReader.numPages
+    print(f'Estas escuchando Neuromante de William Gibson:{paginas}')
+    speaker=pyttsx3.init()
+    for paginas in range (0, paginas):
+        page=PdfReader.getPage(0)
+        text=page.extract_text()
+        speaker.say(text)
+        speaker.runAndWait()
+
+
+
+

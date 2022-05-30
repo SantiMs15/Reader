@@ -30,7 +30,7 @@ if a=="leyenda":
 
 #Terror
 if a=="terror":
-    libro=open("C:\Users\USUARIO\curseforge\Desktop\proyecto ending\Reader\libros\it-eso.pdf","rb")
+    libro=open('C:\Users\USUARIO\curseforge\Desktop\Reader project\Reader\libros\it-eso','rb')
     PdfReader=PyPDF2.PdfFileReader(libro)
     paginas=PdfReader.numPages
     print(f'Estas escuchanda It el payaso de Stephen King. Nro de paginas:{paginas}')

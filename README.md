@@ -1,7 +1,7 @@
 Contextualización del proyecto.
 
 Nuestro proyecto consiste en la creación de un programa que sea capaz de interpretar cantidad de páginas y emitir audio de la lectura de archivos pdf,
-en este caso son libros de diferentes generos literarios que se encuentran en una determimnada carpeta en el equipo.
+en este caso son libros de diferentes generos literarios que se encuentran en una determinada carpeta en el equipo.
 
 Para ello el programa en primera instancia preguntará el genero del libro y según la respuesta procedera a dar la información del libro e iniciara su lectura. 
 
